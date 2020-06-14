@@ -835,8 +835,8 @@
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;BDcondition = random.choice(('conditionList/BD_list1.xlsx','conditionList/BD_list2.xlsx'))&amp;#10;&amp;#10;thisExp.addData('BDcondition_file', BDcondition)" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="BDMouse.setPos({&quot;newPos&quot;: [0, 0]});&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="BDMouse.setPos(newPos=(0,0))" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="BDmouse.setPos({&quot;newPos&quot;: [0, 0]});&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="BDmouse.setPos(newPos=(0,0))" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -946,7 +946,7 @@
     <Routine name="Instruction"/>
     <LoopInitiator loopType="TrialHandler" name="Prac_Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('Uimage', 'materials/Asian/Female/S_A_F_01_250.png'), ('Limage', 'materials/Asian/Female/S_A_F_01_250.png')]), OrderedDict([('Uimage', 'materials/Asian/Male/L_A_M_02_270.png'), ('Limage', 'materials/Asian/Male/S_A_M_02_250.png')]), OrderedDict([('Uimage', 'materials/Caucasian/Female/S_C_F_05_250.png'), ('Limage', 'materials/Caucasian/Female/L_C_F_05_270.png')]), OrderedDict([('Uimage', 'materials/Caucasian/Male/S_C_M_07_250.png'), ('Limage', 'materials/Caucasian/Male/S_C_M_07_250.png')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('UImage', 'materials/Practice/002.jpeg'), ('LImage', 'materials/Practice/001.jpeg')]), OrderedDict([('UImage', 'materials/Practice/002.jpeg'), ('LImage', 'materials/Practice/001.jpeg')]), OrderedDict([('UImage', 'materials/Practice/001.jpeg'), ('LImage', 'materials/Practice/002.jpeg')]), OrderedDict([('UImage', 'materials/Practice/001.jpeg'), ('LImage', 'materials/Practice/002.jpeg')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="Prac_Order.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
