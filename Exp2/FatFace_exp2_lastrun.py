@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Fri Jun 12 15:06:13 2020
+    on Sun Jun 14 14:11:19 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/josephine/Documents/research/FatFaceIllusion/program/Exp2/FatFace_exp2_lastrun.py',
+    originPath='/Users/josephine/Documents/GitHub/FatFace/Exp2/FatFace_exp2_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -67,7 +67,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 win = visual.Window(
     size=[1280, 800], fullscr=True, screen=0, 
     winType='pyglet', allowGUI=False, allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+    monitor='testMonitor', color='white', colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='height')
 # store frame rate of monitor if we can measure it
@@ -86,7 +86,7 @@ InstrText = visual.TextStim(win=win, name='InstrText',
     text='Welcome to our experiment!\n\nIn our experiment, two faces will presented on the Screen, one is on top and another one is at the bottome. \nPlace indicate which face looks fatter by clicking on it as quick as you can.\n\nPress "Space" to go to the practical session.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 InstrKey = keyboard.Keyboard()
@@ -97,9 +97,9 @@ Fixation0 = visual.ShapeStim(
     win=win, name='Fixation0', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
-    opacity=1, depth=0.0, interpolate=True)
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
+    opacity=1, depth=-1.0, interpolate=True)
 Upper_image = visual.ImageStim(
     win=win,
     name='Upper_image', 
@@ -107,7 +107,7 @@ Upper_image = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
+    texRes=128, interpolate=False, depth=-2.0)
 Lower_image = visual.ImageStim(
     win=win,
     name='Lower_image', 
@@ -115,7 +115,7 @@ Lower_image = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-3.0)
 PracMouse = event.Mouse(win=win)
 x, y = [None, None]
 PracMouse.mouseClock = core.Clock()
@@ -136,7 +136,7 @@ BreakText = visual.TextStim(win=win, name='BreakText',
     text='The practise part is over.\n\nPress "Space" to go to the next part.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 Prac_Key = keyboard.Keyboard()
@@ -151,8 +151,8 @@ Fixation = visual.ShapeStim(
     win=win, name='Fixation', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 AS_image_1 = visual.ImageStim(
     win=win,
@@ -161,7 +161,7 @@ AS_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 AS_image_2 = visual.ImageStim(
     win=win,
     name='AS_image_2', 
@@ -169,7 +169,7 @@ AS_image_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 ASMouse = event.Mouse(win=win)
 x, y = [None, None]
 ASMouse.mouseClock = core.Clock()
@@ -194,8 +194,8 @@ Fixation5 = visual.ShapeStim(
     win=win, name='Fixation5', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 BS_image_1 = visual.ImageStim(
     win=win,
@@ -204,7 +204,7 @@ BS_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 BS_image_2 = visual.ImageStim(
     win=win,
     name='BS_image_2', 
@@ -212,7 +212,7 @@ BS_image_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 BSMouse = event.Mouse(win=win)
 x, y = [None, None]
 BSMouse.mouseClock = core.Clock()
@@ -237,8 +237,8 @@ Fixation6 = visual.ShapeStim(
     win=win, name='Fixation6', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 BD_image_1 = visual.ImageStim(
     win=win,
@@ -247,7 +247,7 @@ BD_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 BD_image_2 = visual.ImageStim(
     win=win,
     name='BD_image_2', 
@@ -255,7 +255,7 @@ BD_image_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 BDmouse = event.Mouse(win=win)
 x, y = [None, None]
 BDmouse.mouseClock = core.Clock()
@@ -280,8 +280,8 @@ Fixation2 = visual.ShapeStim(
     win=win, name='Fixation2', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 AD_image_1 = visual.ImageStim(
     win=win,
@@ -290,7 +290,7 @@ AD_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 AD_imgae_2 = visual.ImageStim(
     win=win,
     name='AD_imgae_2', 
@@ -298,7 +298,7 @@ AD_imgae_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 ADMouse = event.Mouse(win=win)
 x, y = [None, None]
 ADMouse.mouseClock = core.Clock()
@@ -323,8 +323,8 @@ Fixation3 = visual.ShapeStim(
     win=win, name='Fixation3', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 CS_image_1 = visual.ImageStim(
     win=win,
@@ -333,7 +333,7 @@ CS_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 CS_image_2 = visual.ImageStim(
     win=win,
     name='CS_image_2', 
@@ -341,7 +341,7 @@ CS_image_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 CSMouse = event.Mouse(win=win)
 x, y = [None, None]
 CSMouse.mouseClock = core.Clock()
@@ -366,8 +366,8 @@ Fixation4 = visual.ShapeStim(
     win=win, name='Fixation4', vertices='cross',
     size=(0.1, 0.1),
     ori=0, pos=(0, 0),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[1,1,1], fillColorSpace='rgb',
+    lineWidth=1, lineColor='black', lineColorSpace='rgb',
+    fillColor='black', fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 CD_image_1 = visual.ImageStim(
     win=win,
@@ -376,7 +376,7 @@ CD_image_1 = visual.ImageStim(
     ori=0, pos=(0, 0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-2.0)
+    texRes=128, interpolate=False, depth=-2.0)
 CD_image_2 = visual.ImageStim(
     win=win,
     name='CD_image_2', 
@@ -384,7 +384,7 @@ CD_image_2 = visual.ImageStim(
     ori=0, pos=(0, -0.16), size=None,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-3.0)
+    texRes=128, interpolate=False, depth=-3.0)
 CDMouse = event.Mouse(win=win)
 x, y = [None, None]
 CDMouse.mouseClock = core.Clock()
@@ -405,7 +405,7 @@ text = visual.TextStim(win=win, name='text',
     text='Thank you!',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 
@@ -530,7 +530,9 @@ for thisPrac_Loop in Prac_Loop:
     
     # ------Prepare to start Routine "Practise"-------
     continueRoutine = True
+    routineTimer.add(3.500000)
     # update component parameters for each repeat
+    PracMouse.setPos(newPos=(0,0))
     Upper_image.setImage(UImage)
     Lower_image.setImage(LImage)
     # setup some python lists for storing info about the PracMouse
@@ -553,7 +555,7 @@ for thisPrac_Loop in Prac_Loop:
     frameN = -1
     
     # -------Run Routine "Practise"-------
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = PractiseClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=PractiseClock)
@@ -612,7 +614,7 @@ for thisPrac_Loop in Prac_Loop:
                 win.timeOnFlip(Lower_image, 'tStopRefresh')  # time at next scr refresh
                 Lower_image.setAutoDraw(False)
         # *PracMouse* updates
-        if PracMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        if PracMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
             # keep track of start time/frame for later
             PracMouse.frameNStart = frameN  # exact frame index
             PracMouse.tStart = t  # local t and not account for scr refresh
@@ -621,6 +623,14 @@ for thisPrac_Loop in Prac_Loop:
             PracMouse.status = STARTED
             PracMouse.mouseClock.reset()
             prevButtonState = PracMouse.getPressed()  # if button is down already this ISN'T a new click
+        if PracMouse.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > PracMouse.tStartRefresh + 3-frameTolerance:
+                # keep track of stop time/frame for later
+                PracMouse.tStop = t  # not accounting for scr refresh
+                PracMouse.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(PracMouse, 'tStopRefresh')  # time at next scr refresh
+                PracMouse.status = FINISHED
         if PracMouse.status == STARTED:  # only update if started and not finished!
             buttons = PracMouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
@@ -685,8 +695,6 @@ for thisPrac_Loop in Prac_Loop:
         Prac_Loop.addData('PracMouse.clicked_pos', PracMouse.clicked_pos[0])
     Prac_Loop.addData('PracMouse.started', PracMouse.tStart)
     Prac_Loop.addData('PracMouse.stopped', PracMouse.tStop)
-    # the Routine "Practise" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # ------Prepare to start Routine "Blank500"-------
     continueRoutine = True
@@ -897,7 +905,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "AsianS"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        ASMouse.setPos(newPos=(0,0))
         AS_image_1.setImage(Upper_Image)
         AS_image_2.setImage(Lower_Image)
         # setup some python lists for storing info about the ASMouse
@@ -920,7 +930,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "AsianS"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = AsianSClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=AsianSClock)
@@ -979,7 +989,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(AS_image_2, 'tStopRefresh')  # time at next scr refresh
                     AS_image_2.setAutoDraw(False)
             # *ASMouse* updates
-            if ASMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if ASMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 ASMouse.frameNStart = frameN  # exact frame index
                 ASMouse.tStart = t  # local t and not account for scr refresh
@@ -988,6 +998,14 @@ for thisBlockTrail in BlockTrail:
                 ASMouse.status = STARTED
                 ASMouse.mouseClock.reset()
                 prevButtonState = ASMouse.getPressed()  # if button is down already this ISN'T a new click
+            if ASMouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > ASMouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    ASMouse.tStop = t  # not accounting for scr refresh
+                    ASMouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(ASMouse, 'tStopRefresh')  # time at next scr refresh
+                    ASMouse.status = FINISHED
             if ASMouse.status == STARTED:  # only update if started and not finished!
                 buttons = ASMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1052,8 +1070,6 @@ for thisBlockTrail in BlockTrail:
             AS_Loop.addData('ASMouse.clicked_pos', ASMouse.clicked_pos[0])
         AS_Loop.addData('ASMouse.started', ASMouse.tStart)
         AS_Loop.addData('ASMouse.stopped', ASMouse.tStop)
-        # the Routine "AsianS" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
@@ -1149,7 +1165,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "BlackS"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        BSMouse.setPos(newPos=(0,0))
         BS_image_1.setImage(Upper_Image)
         BS_image_2.setImage(Lower_Image)
         # setup some python lists for storing info about the BSMouse
@@ -1172,7 +1190,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "BlackS"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = BlackSClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=BlackSClock)
@@ -1231,7 +1249,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(BS_image_2, 'tStopRefresh')  # time at next scr refresh
                     BS_image_2.setAutoDraw(False)
             # *BSMouse* updates
-            if BSMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if BSMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 BSMouse.frameNStart = frameN  # exact frame index
                 BSMouse.tStart = t  # local t and not account for scr refresh
@@ -1240,6 +1258,14 @@ for thisBlockTrail in BlockTrail:
                 BSMouse.status = STARTED
                 BSMouse.mouseClock.reset()
                 prevButtonState = BSMouse.getPressed()  # if button is down already this ISN'T a new click
+            if BSMouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > BSMouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    BSMouse.tStop = t  # not accounting for scr refresh
+                    BSMouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(BSMouse, 'tStopRefresh')  # time at next scr refresh
+                    BSMouse.status = FINISHED
             if BSMouse.status == STARTED:  # only update if started and not finished!
                 buttons = BSMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1304,8 +1330,6 @@ for thisBlockTrail in BlockTrail:
             BS_Loop.addData('BSMouse.clicked_pos', BSMouse.clicked_pos[0])
         BS_Loop.addData('BSMouse.started', BSMouse.tStart)
         BS_Loop.addData('BSMouse.stopped', BSMouse.tStop)
-        # the Routine "BlackS" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
@@ -1401,7 +1425,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "BlackD"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        BDmouse.setPos(newPos=(0,0))
         BD_image_1.setImage(Upper_Image)
         BD_image_2.setImage(Lower_Image)
         # setup some python lists for storing info about the BDmouse
@@ -1424,7 +1450,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "BlackD"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = BlackDClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=BlackDClock)
@@ -1483,7 +1509,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(BD_image_2, 'tStopRefresh')  # time at next scr refresh
                     BD_image_2.setAutoDraw(False)
             # *BDmouse* updates
-            if BDmouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if BDmouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 BDmouse.frameNStart = frameN  # exact frame index
                 BDmouse.tStart = t  # local t and not account for scr refresh
@@ -1492,6 +1518,14 @@ for thisBlockTrail in BlockTrail:
                 BDmouse.status = STARTED
                 BDmouse.mouseClock.reset()
                 prevButtonState = BDmouse.getPressed()  # if button is down already this ISN'T a new click
+            if BDmouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > BDmouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    BDmouse.tStop = t  # not accounting for scr refresh
+                    BDmouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(BDmouse, 'tStopRefresh')  # time at next scr refresh
+                    BDmouse.status = FINISHED
             if BDmouse.status == STARTED:  # only update if started and not finished!
                 buttons = BDmouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1556,8 +1590,6 @@ for thisBlockTrail in BlockTrail:
             BD_Loop.addData('BDmouse.clicked_pos', BDmouse.clicked_pos[0])
         BD_Loop.addData('BDmouse.started', BDmouse.tStart)
         BD_Loop.addData('BDmouse.stopped', BDmouse.tStop)
-        # the Routine "BlackD" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
@@ -1653,7 +1685,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "AsianD"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        ADMouse.setPos(newPos=(0,0))
         AD_image_1.setImage(Upper_Image)
         AD_imgae_2.setImage(Lower_Image)
         # setup some python lists for storing info about the ADMouse
@@ -1676,7 +1710,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "AsianD"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = AsianDClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=AsianDClock)
@@ -1735,7 +1769,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(AD_imgae_2, 'tStopRefresh')  # time at next scr refresh
                     AD_imgae_2.setAutoDraw(False)
             # *ADMouse* updates
-            if ADMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if ADMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 ADMouse.frameNStart = frameN  # exact frame index
                 ADMouse.tStart = t  # local t and not account for scr refresh
@@ -1744,6 +1778,14 @@ for thisBlockTrail in BlockTrail:
                 ADMouse.status = STARTED
                 ADMouse.mouseClock.reset()
                 prevButtonState = ADMouse.getPressed()  # if button is down already this ISN'T a new click
+            if ADMouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > ADMouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    ADMouse.tStop = t  # not accounting for scr refresh
+                    ADMouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(ADMouse, 'tStopRefresh')  # time at next scr refresh
+                    ADMouse.status = FINISHED
             if ADMouse.status == STARTED:  # only update if started and not finished!
                 buttons = ADMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1808,8 +1850,6 @@ for thisBlockTrail in BlockTrail:
             AD_Loop.addData('ADMouse.clicked_pos', ADMouse.clicked_pos[0])
         AD_Loop.addData('ADMouse.started', ADMouse.tStart)
         AD_Loop.addData('ADMouse.stopped', ADMouse.tStop)
-        # the Routine "AsianD" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
@@ -1905,7 +1945,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "CaucasianS"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        CSMouse.setPos(newPos=(0,0))
         CS_image_1.setImage(Upper_Image)
         CS_image_2.setImage(Lower_Image)
         # setup some python lists for storing info about the CSMouse
@@ -1928,7 +1970,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "CaucasianS"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = CaucasianSClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=CaucasianSClock)
@@ -1987,7 +2029,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(CS_image_2, 'tStopRefresh')  # time at next scr refresh
                     CS_image_2.setAutoDraw(False)
             # *CSMouse* updates
-            if CSMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if CSMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 CSMouse.frameNStart = frameN  # exact frame index
                 CSMouse.tStart = t  # local t and not account for scr refresh
@@ -1996,6 +2038,14 @@ for thisBlockTrail in BlockTrail:
                 CSMouse.status = STARTED
                 CSMouse.mouseClock.reset()
                 prevButtonState = CSMouse.getPressed()  # if button is down already this ISN'T a new click
+            if CSMouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > CSMouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    CSMouse.tStop = t  # not accounting for scr refresh
+                    CSMouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(CSMouse, 'tStopRefresh')  # time at next scr refresh
+                    CSMouse.status = FINISHED
             if CSMouse.status == STARTED:  # only update if started and not finished!
                 buttons = CSMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -2060,8 +2110,6 @@ for thisBlockTrail in BlockTrail:
             CS_Loop.addData('CSMouse.clicked_pos', CSMouse.clicked_pos[0])
         CS_Loop.addData('CSMouse.started', CSMouse.tStart)
         CS_Loop.addData('CSMouse.stopped', CSMouse.tStop)
-        # the Routine "CaucasianS" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
@@ -2157,7 +2205,9 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "CaucasianD"-------
         continueRoutine = True
+        routineTimer.add(3.500000)
         # update component parameters for each repeat
+        CDMouse.setPos(newPos=(0,0))
         CD_image_1.setImage(Upper_Image)
         CD_image_2.setImage(Lower_Image)
         # setup some python lists for storing info about the CDMouse
@@ -2180,7 +2230,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "CaucasianD"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = CaucasianDClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=CaucasianDClock)
@@ -2239,7 +2289,7 @@ for thisBlockTrail in BlockTrail:
                     win.timeOnFlip(CD_image_2, 'tStopRefresh')  # time at next scr refresh
                     CD_image_2.setAutoDraw(False)
             # *CDMouse* updates
-            if CDMouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if CDMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
                 CDMouse.frameNStart = frameN  # exact frame index
                 CDMouse.tStart = t  # local t and not account for scr refresh
@@ -2248,6 +2298,14 @@ for thisBlockTrail in BlockTrail:
                 CDMouse.status = STARTED
                 CDMouse.mouseClock.reset()
                 prevButtonState = CDMouse.getPressed()  # if button is down already this ISN'T a new click
+            if CDMouse.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > CDMouse.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    CDMouse.tStop = t  # not accounting for scr refresh
+                    CDMouse.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(CDMouse, 'tStopRefresh')  # time at next scr refresh
+                    CDMouse.status = FINISHED
             if CDMouse.status == STARTED:  # only update if started and not finished!
                 buttons = CDMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -2312,8 +2370,6 @@ for thisBlockTrail in BlockTrail:
             CD_Loop.addData('CDMouse.clicked_pos', CDMouse.clicked_pos[0])
         CD_Loop.addData('CDMouse.started', CDMouse.tStart)
         CD_Loop.addData('CDMouse.stopped', CDMouse.tStop)
-        # the Routine "CaucasianD" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # ------Prepare to start Routine "Blank500"-------
         continueRoutine = True
