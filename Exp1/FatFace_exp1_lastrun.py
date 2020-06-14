@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Sat Jun 13 18:01:01 2020
+    on Sun Jun 14 14:03:09 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/naiqixiao/Documents/GitHub/FatFace/Exp1/FatFace_exp1_lastrun.py',
+    originPath='/Users/josephine/Documents/GitHub/FatFace/Exp1/FatFace_exp1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -1173,7 +1173,8 @@ for thisBlockTrail in BlockTrail:
                 AMMouse.mouseClock.reset()
                 prevButtonState = AMMouse.getPressed()  # if button is down already this ISN'T a new click
             if AMMouse.status == STARTED:
-                if bool(3):
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > AMMouse.tStartRefresh + 3-frameTolerance:
                     # keep track of stop time/frame for later
                     AMMouse.tStop = t  # not accounting for scr refresh
                     AMMouse.frameNStop = frameN  # exact frame index
