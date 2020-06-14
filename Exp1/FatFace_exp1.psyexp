@@ -217,7 +217,7 @@
         <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var AMcondition;&amp;#10;AMcondition = random.choice([&quot;AM_list1.xlsx&quot;, &quot;AM_list2.xlsx&quot;, &quot;AM_list3.xlsx&quot;, &quot;AM_list4.xlsx&quot;, &quot;AM_list5.xlsx&quot;]);&amp;#10;thisExp.addData(&quot;AMcondition_file&quot;, AMcondition);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="AMMouse.setPos({&quot;newPos&quot;: [0, 0]});&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="AMMouse.setPos(newPos=(0,0))" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -315,7 +315,7 @@
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.5" valType="code"/>
-        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="3" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
@@ -726,7 +726,7 @@
     <Routine name="Instruction"/>
     <LoopInitiator loopType="TrialHandler" name="Prac_Loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('Uimage', 'materials/Asian/Female/S_A_F_01_250.png'), ('Limage', 'materials/Asian/Female/S_A_F_01_250.png')]), OrderedDict([('Uimage', 'materials/Asian/Male/L_A_M_02_270.png'), ('Limage', 'materials/Asian/Male/S_A_M_02_250.png')]), OrderedDict([('Uimage', 'materials/Caucasian/Female/S_C_F_05_250.png'), ('Limage', 'materials/Caucasian/Female/L_C_F_05_270.png')]), OrderedDict([('Uimage', 'materials/Caucasian/Male/S_C_M_07_250.png'), ('Limage', 'materials/Caucasian/Male/S_C_M_07_250.png')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('UImage', 'materials/Practice/002.jpeg'), ('LImage', 'materials/Practice/001.jpeg')]), OrderedDict([('UImage', 'materials/Practice/002.jpeg'), ('LImage', 'materials/Practice/001.jpeg')]), OrderedDict([('UImage', 'materials/Practice/001.jpeg'), ('LImage', 'materials/Practice/002.jpeg')]), OrderedDict([('UImage', 'materials/Practice/001.jpeg'), ('LImage', 'materials/Practice/002.jpeg')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="Prac_Order.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
