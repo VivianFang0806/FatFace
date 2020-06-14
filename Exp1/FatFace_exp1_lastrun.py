@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Sun Jun 14 14:03:09 2020
+    on Sun Jun 14 17:42:06 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/josephine/Documents/GitHub/FatFace/Exp1/FatFace_exp1_lastrun.py',
+    originPath='/Users/naiqixiao/Documents/GitHub/FatFace/Exp1/FatFace_exp1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -120,15 +120,15 @@ PracMouse = event.Mouse(win=win)
 x, y = [None, None]
 PracMouse.mouseClock = core.Clock()
 
-# Initialize components for Routine "Blank500"
-Blank500Clock = core.Clock()
+# Initialize components for Routine "ITI"
+ITIClock = core.Clock()
 BlankTest = visual.TextStim(win=win, name='BlankTest',
     text=None,
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "Break"
 BreakClock = core.Clock()
@@ -174,15 +174,15 @@ AFMouse = event.Mouse(win=win)
 x, y = [None, None]
 AFMouse.mouseClock = core.Clock()
 
-# Initialize components for Routine "Blank500"
-Blank500Clock = core.Clock()
+# Initialize components for Routine "ITI"
+ITIClock = core.Clock()
 BlankTest = visual.TextStim(win=win, name='BlankTest',
     text=None,
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "AsianM"
 AsianMClock = core.Clock()
@@ -217,15 +217,15 @@ AMMouse = event.Mouse(win=win)
 x, y = [None, None]
 AMMouse.mouseClock = core.Clock()
 
-# Initialize components for Routine "Blank500"
-Blank500Clock = core.Clock()
+# Initialize components for Routine "ITI"
+ITIClock = core.Clock()
 BlankTest = visual.TextStim(win=win, name='BlankTest',
     text=None,
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "CaucasianF"
 CaucasianFClock = core.Clock()
@@ -260,15 +260,15 @@ CFMouse = event.Mouse(win=win)
 x, y = [None, None]
 CFMouse.mouseClock = core.Clock()
 
-# Initialize components for Routine "Blank500"
-Blank500Clock = core.Clock()
+# Initialize components for Routine "ITI"
+ITIClock = core.Clock()
 BlankTest = visual.TextStim(win=win, name='BlankTest',
     text=None,
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "CaucasianM"
 CaucasianMClock = core.Clock()
@@ -303,15 +303,15 @@ CMMouse = event.Mouse(win=win)
 x, y = [None, None]
 CMMouse.mouseClock = core.Clock()
 
-# Initialize components for Routine "Blank500"
-Blank500Clock = core.Clock()
+# Initialize components for Routine "ITI"
+ITIClock = core.Clock()
 BlankTest = visual.TextStim(win=win, name='BlankTest',
     text=None,
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "End"
 EndClock = core.Clock()
@@ -444,7 +444,6 @@ for thisPrac_Loop in Prac_Loop:
     
     # ------Prepare to start Routine "Practise"-------
     continueRoutine = True
-    routineTimer.add(3.500000)
     # update component parameters for each repeat
     PracMouse.setPos(newPos=(0,0))
     Upper_image.setImage(UImage)
@@ -469,7 +468,7 @@ for thisPrac_Loop in Prac_Loop:
     frameN = -1
     
     # -------Run Routine "Practise"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    while continueRoutine:
         # get current time
         t = PractiseClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=PractiseClock)
@@ -502,14 +501,6 @@ for thisPrac_Loop in Prac_Loop:
             Upper_image.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(Upper_image, 'tStartRefresh')  # time at next scr refresh
             Upper_image.setAutoDraw(True)
-        if Upper_image.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > Upper_image.tStartRefresh + 3-frameTolerance:
-                # keep track of stop time/frame for later
-                Upper_image.tStop = t  # not accounting for scr refresh
-                Upper_image.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(Upper_image, 'tStopRefresh')  # time at next scr refresh
-                Upper_image.setAutoDraw(False)
         
         # *Lower_image* updates
         if Lower_image.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -519,14 +510,6 @@ for thisPrac_Loop in Prac_Loop:
             Lower_image.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(Lower_image, 'tStartRefresh')  # time at next scr refresh
             Lower_image.setAutoDraw(True)
-        if Lower_image.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > Lower_image.tStartRefresh + 3-frameTolerance:
-                # keep track of stop time/frame for later
-                Lower_image.tStop = t  # not accounting for scr refresh
-                Lower_image.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(Lower_image, 'tStopRefresh')  # time at next scr refresh
-                Lower_image.setAutoDraw(False)
         # *PracMouse* updates
         if PracMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
             # keep track of start time/frame for later
@@ -537,14 +520,6 @@ for thisPrac_Loop in Prac_Loop:
             PracMouse.status = STARTED
             PracMouse.mouseClock.reset()
             prevButtonState = PracMouse.getPressed()  # if button is down already this ISN'T a new click
-        if PracMouse.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > PracMouse.tStartRefresh + 3-frameTolerance:
-                # keep track of stop time/frame for later
-                PracMouse.tStop = t  # not accounting for scr refresh
-                PracMouse.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(PracMouse, 'tStopRefresh')  # time at next scr refresh
-                PracMouse.status = FINISHED
         if PracMouse.status == STARTED:  # only update if started and not finished!
             buttons = PracMouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
@@ -609,14 +584,19 @@ for thisPrac_Loop in Prac_Loop:
         Prac_Loop.addData('PracMouse.clicked_pos', PracMouse.clicked_pos[0])
     Prac_Loop.addData('PracMouse.started', PracMouse.tStart)
     Prac_Loop.addData('PracMouse.stopped', PracMouse.tStop)
+    # the Routine "Practise" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     
-    # ------Prepare to start Routine "Blank500"-------
+    # ------Prepare to start Routine "ITI"-------
     continueRoutine = True
-    routineTimer.add(0.500000)
     # update component parameters for each repeat
+    import random 
+    ITI = random.uniform(0.5, 1.5)
+    thisExp.addData('ITI', ITI) # record it in the data file
+    
     # keep track of which components have finished
-    Blank500Components = [BlankTest]
-    for thisComponent in Blank500Components:
+    ITIComponents = [BlankTest]
+    for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -626,14 +606,14 @@ for thisPrac_Loop in Prac_Loop:
     # reset timers
     t = 0
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    Blank500Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    ITIClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
     frameN = -1
     
-    # -------Run Routine "Blank500"-------
-    while continueRoutine and routineTimer.getTime() > 0:
+    # -------Run Routine "ITI"-------
+    while continueRoutine:
         # get current time
-        t = Blank500Clock.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=Blank500Clock)
+        t = ITIClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=ITIClock)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
@@ -648,7 +628,7 @@ for thisPrac_Loop in Prac_Loop:
             BlankTest.setAutoDraw(True)
         if BlankTest.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankTest.tStartRefresh + 0.5-frameTolerance:
+            if tThisFlipGlobal > BlankTest.tStartRefresh + ITI-frameTolerance:
                 # keep track of stop time/frame for later
                 BlankTest.tStop = t  # not accounting for scr refresh
                 BlankTest.frameNStop = frameN  # exact frame index
@@ -663,7 +643,7 @@ for thisPrac_Loop in Prac_Loop:
         if not continueRoutine:  # a component has requested a forced-end of Routine
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in Blank500Components:
+        for thisComponent in ITIComponents:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -672,12 +652,14 @@ for thisPrac_Loop in Prac_Loop:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # -------Ending Routine "Blank500"-------
-    for thisComponent in Blank500Components:
+    # -------Ending Routine "ITI"-------
+    for thisComponent in ITIComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     Prac_Loop.addData('BlankTest.started', BlankTest.tStartRefresh)
     Prac_Loop.addData('BlankTest.stopped', BlankTest.tStopRefresh)
+    # the Routine "ITI" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     thisExp.nextEntry()
     
 # completed 1 repeats of 'Prac_Loop'
@@ -819,7 +801,6 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "AsianF"-------
         continueRoutine = True
-        routineTimer.add(3.500000)
         # update component parameters for each repeat
         AFMouse.setPos(newPos=(0,0))
         AF_image_1.setImage(Upper_Image)
@@ -844,7 +825,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "AsianF"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = AsianFClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=AsianFClock)
@@ -877,14 +858,6 @@ for thisBlockTrail in BlockTrail:
                 AF_image_1.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(AF_image_1, 'tStartRefresh')  # time at next scr refresh
                 AF_image_1.setAutoDraw(True)
-            if AF_image_1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AF_image_1.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AF_image_1.tStop = t  # not accounting for scr refresh
-                    AF_image_1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AF_image_1, 'tStopRefresh')  # time at next scr refresh
-                    AF_image_1.setAutoDraw(False)
             
             # *AF_image_2* updates
             if AF_image_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -894,14 +867,6 @@ for thisBlockTrail in BlockTrail:
                 AF_image_2.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(AF_image_2, 'tStartRefresh')  # time at next scr refresh
                 AF_image_2.setAutoDraw(True)
-            if AF_image_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AF_image_2.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AF_image_2.tStop = t  # not accounting for scr refresh
-                    AF_image_2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AF_image_2, 'tStopRefresh')  # time at next scr refresh
-                    AF_image_2.setAutoDraw(False)
             # *AFMouse* updates
             if AFMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
@@ -912,14 +877,6 @@ for thisBlockTrail in BlockTrail:
                 AFMouse.status = STARTED
                 AFMouse.mouseClock.reset()
                 prevButtonState = AFMouse.getPressed()  # if button is down already this ISN'T a new click
-            if AFMouse.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AFMouse.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AFMouse.tStop = t  # not accounting for scr refresh
-                    AFMouse.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AFMouse, 'tStopRefresh')  # time at next scr refresh
-                    AFMouse.status = FINISHED
             if AFMouse.status == STARTED:  # only update if started and not finished!
                 buttons = AFMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -984,14 +941,19 @@ for thisBlockTrail in BlockTrail:
             AF_Loop.addData('AFMouse.clicked_pos', AFMouse.clicked_pos[0])
         AF_Loop.addData('AFMouse.started', AFMouse.tStart)
         AF_Loop.addData('AFMouse.stopped', AFMouse.tStop)
+        # the Routine "AsianF" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
-        # ------Prepare to start Routine "Blank500"-------
+        # ------Prepare to start Routine "ITI"-------
         continueRoutine = True
-        routineTimer.add(0.500000)
         # update component parameters for each repeat
+        import random 
+        ITI = random.uniform(0.5, 1.5)
+        thisExp.addData('ITI', ITI) # record it in the data file
+        
         # keep track of which components have finished
-        Blank500Components = [BlankTest]
-        for thisComponent in Blank500Components:
+        ITIComponents = [BlankTest]
+        for thisComponent in ITIComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1001,14 +963,14 @@ for thisBlockTrail in BlockTrail:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        Blank500Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        ITIClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Blank500"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        # -------Run Routine "ITI"-------
+        while continueRoutine:
             # get current time
-            t = Blank500Clock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=Blank500Clock)
+            t = ITIClock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=ITIClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
@@ -1023,7 +985,7 @@ for thisBlockTrail in BlockTrail:
                 BlankTest.setAutoDraw(True)
             if BlankTest.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > BlankTest.tStartRefresh + 0.5-frameTolerance:
+                if tThisFlipGlobal > BlankTest.tStartRefresh + ITI-frameTolerance:
                     # keep track of stop time/frame for later
                     BlankTest.tStop = t  # not accounting for scr refresh
                     BlankTest.frameNStop = frameN  # exact frame index
@@ -1038,7 +1000,7 @@ for thisBlockTrail in BlockTrail:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Blank500Components:
+            for thisComponent in ITIComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1047,12 +1009,14 @@ for thisBlockTrail in BlockTrail:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Blank500"-------
-        for thisComponent in Blank500Components:
+        # -------Ending Routine "ITI"-------
+        for thisComponent in ITIComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         AF_Loop.addData('BlankTest.started', BlankTest.tStartRefresh)
         AF_Loop.addData('BlankTest.stopped', BlankTest.tStopRefresh)
+        # the Routine "ITI" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed AF_rep repeats of 'AF_Loop'
@@ -1079,7 +1043,6 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "AsianM"-------
         continueRoutine = True
-        routineTimer.add(3.500000)
         # update component parameters for each repeat
         AMMouse.setPos(newPos=(0,0))
         AM_image_1.setImage(Upper_Image)
@@ -1104,7 +1067,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "AsianM"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = AsianMClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=AsianMClock)
@@ -1137,14 +1100,6 @@ for thisBlockTrail in BlockTrail:
                 AM_image_1.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(AM_image_1, 'tStartRefresh')  # time at next scr refresh
                 AM_image_1.setAutoDraw(True)
-            if AM_image_1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AM_image_1.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AM_image_1.tStop = t  # not accounting for scr refresh
-                    AM_image_1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AM_image_1, 'tStopRefresh')  # time at next scr refresh
-                    AM_image_1.setAutoDraw(False)
             
             # *AM_imgae_2* updates
             if AM_imgae_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -1154,14 +1109,6 @@ for thisBlockTrail in BlockTrail:
                 AM_imgae_2.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(AM_imgae_2, 'tStartRefresh')  # time at next scr refresh
                 AM_imgae_2.setAutoDraw(True)
-            if AM_imgae_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AM_imgae_2.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AM_imgae_2.tStop = t  # not accounting for scr refresh
-                    AM_imgae_2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AM_imgae_2, 'tStopRefresh')  # time at next scr refresh
-                    AM_imgae_2.setAutoDraw(False)
             # *AMMouse* updates
             if AMMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
@@ -1172,14 +1119,6 @@ for thisBlockTrail in BlockTrail:
                 AMMouse.status = STARTED
                 AMMouse.mouseClock.reset()
                 prevButtonState = AMMouse.getPressed()  # if button is down already this ISN'T a new click
-            if AMMouse.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > AMMouse.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    AMMouse.tStop = t  # not accounting for scr refresh
-                    AMMouse.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(AMMouse, 'tStopRefresh')  # time at next scr refresh
-                    AMMouse.status = FINISHED
             if AMMouse.status == STARTED:  # only update if started and not finished!
                 buttons = AMMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1244,14 +1183,19 @@ for thisBlockTrail in BlockTrail:
             AM_Loop.addData('AMMouse.clicked_pos', AMMouse.clicked_pos[0])
         AM_Loop.addData('AMMouse.started', AMMouse.tStart)
         AM_Loop.addData('AMMouse.stopped', AMMouse.tStop)
+        # the Routine "AsianM" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
-        # ------Prepare to start Routine "Blank500"-------
+        # ------Prepare to start Routine "ITI"-------
         continueRoutine = True
-        routineTimer.add(0.500000)
         # update component parameters for each repeat
+        import random 
+        ITI = random.uniform(0.5, 1.5)
+        thisExp.addData('ITI', ITI) # record it in the data file
+        
         # keep track of which components have finished
-        Blank500Components = [BlankTest]
-        for thisComponent in Blank500Components:
+        ITIComponents = [BlankTest]
+        for thisComponent in ITIComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1261,14 +1205,14 @@ for thisBlockTrail in BlockTrail:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        Blank500Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        ITIClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Blank500"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        # -------Run Routine "ITI"-------
+        while continueRoutine:
             # get current time
-            t = Blank500Clock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=Blank500Clock)
+            t = ITIClock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=ITIClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
@@ -1283,7 +1227,7 @@ for thisBlockTrail in BlockTrail:
                 BlankTest.setAutoDraw(True)
             if BlankTest.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > BlankTest.tStartRefresh + 0.5-frameTolerance:
+                if tThisFlipGlobal > BlankTest.tStartRefresh + ITI-frameTolerance:
                     # keep track of stop time/frame for later
                     BlankTest.tStop = t  # not accounting for scr refresh
                     BlankTest.frameNStop = frameN  # exact frame index
@@ -1298,7 +1242,7 @@ for thisBlockTrail in BlockTrail:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Blank500Components:
+            for thisComponent in ITIComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1307,12 +1251,14 @@ for thisBlockTrail in BlockTrail:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Blank500"-------
-        for thisComponent in Blank500Components:
+        # -------Ending Routine "ITI"-------
+        for thisComponent in ITIComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         AM_Loop.addData('BlankTest.started', BlankTest.tStartRefresh)
         AM_Loop.addData('BlankTest.stopped', BlankTest.tStopRefresh)
+        # the Routine "ITI" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed AM_rep repeats of 'AM_Loop'
@@ -1339,7 +1285,6 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "CaucasianF"-------
         continueRoutine = True
-        routineTimer.add(3.500000)
         # update component parameters for each repeat
         CFMouse.setPos(newPos=(0,0))
         CF_image_1.setImage(Upper_Image)
@@ -1364,7 +1309,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "CaucasianF"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = CaucasianFClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=CaucasianFClock)
@@ -1397,14 +1342,6 @@ for thisBlockTrail in BlockTrail:
                 CF_image_1.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(CF_image_1, 'tStartRefresh')  # time at next scr refresh
                 CF_image_1.setAutoDraw(True)
-            if CF_image_1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CF_image_1.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CF_image_1.tStop = t  # not accounting for scr refresh
-                    CF_image_1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CF_image_1, 'tStopRefresh')  # time at next scr refresh
-                    CF_image_1.setAutoDraw(False)
             
             # *CF_image_2* updates
             if CF_image_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -1414,14 +1351,6 @@ for thisBlockTrail in BlockTrail:
                 CF_image_2.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(CF_image_2, 'tStartRefresh')  # time at next scr refresh
                 CF_image_2.setAutoDraw(True)
-            if CF_image_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CF_image_2.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CF_image_2.tStop = t  # not accounting for scr refresh
-                    CF_image_2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CF_image_2, 'tStopRefresh')  # time at next scr refresh
-                    CF_image_2.setAutoDraw(False)
             # *CFMouse* updates
             if CFMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
@@ -1432,14 +1361,6 @@ for thisBlockTrail in BlockTrail:
                 CFMouse.status = STARTED
                 CFMouse.mouseClock.reset()
                 prevButtonState = CFMouse.getPressed()  # if button is down already this ISN'T a new click
-            if CFMouse.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CFMouse.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CFMouse.tStop = t  # not accounting for scr refresh
-                    CFMouse.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CFMouse, 'tStopRefresh')  # time at next scr refresh
-                    CFMouse.status = FINISHED
             if CFMouse.status == STARTED:  # only update if started and not finished!
                 buttons = CFMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1504,14 +1425,19 @@ for thisBlockTrail in BlockTrail:
             CF_Loop.addData('CFMouse.clicked_pos', CFMouse.clicked_pos[0])
         CF_Loop.addData('CFMouse.started', CFMouse.tStart)
         CF_Loop.addData('CFMouse.stopped', CFMouse.tStop)
+        # the Routine "CaucasianF" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
-        # ------Prepare to start Routine "Blank500"-------
+        # ------Prepare to start Routine "ITI"-------
         continueRoutine = True
-        routineTimer.add(0.500000)
         # update component parameters for each repeat
+        import random 
+        ITI = random.uniform(0.5, 1.5)
+        thisExp.addData('ITI', ITI) # record it in the data file
+        
         # keep track of which components have finished
-        Blank500Components = [BlankTest]
-        for thisComponent in Blank500Components:
+        ITIComponents = [BlankTest]
+        for thisComponent in ITIComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1521,14 +1447,14 @@ for thisBlockTrail in BlockTrail:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        Blank500Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        ITIClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Blank500"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        # -------Run Routine "ITI"-------
+        while continueRoutine:
             # get current time
-            t = Blank500Clock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=Blank500Clock)
+            t = ITIClock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=ITIClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
@@ -1543,7 +1469,7 @@ for thisBlockTrail in BlockTrail:
                 BlankTest.setAutoDraw(True)
             if BlankTest.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > BlankTest.tStartRefresh + 0.5-frameTolerance:
+                if tThisFlipGlobal > BlankTest.tStartRefresh + ITI-frameTolerance:
                     # keep track of stop time/frame for later
                     BlankTest.tStop = t  # not accounting for scr refresh
                     BlankTest.frameNStop = frameN  # exact frame index
@@ -1558,7 +1484,7 @@ for thisBlockTrail in BlockTrail:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Blank500Components:
+            for thisComponent in ITIComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1567,12 +1493,14 @@ for thisBlockTrail in BlockTrail:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Blank500"-------
-        for thisComponent in Blank500Components:
+        # -------Ending Routine "ITI"-------
+        for thisComponent in ITIComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         CF_Loop.addData('BlankTest.started', BlankTest.tStartRefresh)
         CF_Loop.addData('BlankTest.stopped', BlankTest.tStopRefresh)
+        # the Routine "ITI" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed CF_rep repeats of 'CF_Loop'
@@ -1599,7 +1527,6 @@ for thisBlockTrail in BlockTrail:
         
         # ------Prepare to start Routine "CaucasianM"-------
         continueRoutine = True
-        routineTimer.add(3.500000)
         # update component parameters for each repeat
         CMMouse.setPos(newPos=(0,0))
         CM_image_1.setImage(Upper_Image)
@@ -1624,7 +1551,7 @@ for thisBlockTrail in BlockTrail:
         frameN = -1
         
         # -------Run Routine "CaucasianM"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = CaucasianMClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=CaucasianMClock)
@@ -1657,14 +1584,6 @@ for thisBlockTrail in BlockTrail:
                 CM_image_1.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(CM_image_1, 'tStartRefresh')  # time at next scr refresh
                 CM_image_1.setAutoDraw(True)
-            if CM_image_1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CM_image_1.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CM_image_1.tStop = t  # not accounting for scr refresh
-                    CM_image_1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CM_image_1, 'tStopRefresh')  # time at next scr refresh
-                    CM_image_1.setAutoDraw(False)
             
             # *CM_image_2* updates
             if CM_image_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -1674,14 +1593,6 @@ for thisBlockTrail in BlockTrail:
                 CM_image_2.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(CM_image_2, 'tStartRefresh')  # time at next scr refresh
                 CM_image_2.setAutoDraw(True)
-            if CM_image_2.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CM_image_2.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CM_image_2.tStop = t  # not accounting for scr refresh
-                    CM_image_2.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CM_image_2, 'tStopRefresh')  # time at next scr refresh
-                    CM_image_2.setAutoDraw(False)
             # *CMMouse* updates
             if CMMouse.status == NOT_STARTED and t >= 0.5-frameTolerance:
                 # keep track of start time/frame for later
@@ -1692,14 +1603,6 @@ for thisBlockTrail in BlockTrail:
                 CMMouse.status = STARTED
                 CMMouse.mouseClock.reset()
                 prevButtonState = CMMouse.getPressed()  # if button is down already this ISN'T a new click
-            if CMMouse.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > CMMouse.tStartRefresh + 3-frameTolerance:
-                    # keep track of stop time/frame for later
-                    CMMouse.tStop = t  # not accounting for scr refresh
-                    CMMouse.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(CMMouse, 'tStopRefresh')  # time at next scr refresh
-                    CMMouse.status = FINISHED
             if CMMouse.status == STARTED:  # only update if started and not finished!
                 buttons = CMMouse.getPressed()
                 if buttons != prevButtonState:  # button state changed?
@@ -1764,14 +1667,19 @@ for thisBlockTrail in BlockTrail:
             CM_Loop.addData('CMMouse.clicked_pos', CMMouse.clicked_pos[0])
         CM_Loop.addData('CMMouse.started', CMMouse.tStart)
         CM_Loop.addData('CMMouse.stopped', CMMouse.tStop)
+        # the Routine "CaucasianM" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
-        # ------Prepare to start Routine "Blank500"-------
+        # ------Prepare to start Routine "ITI"-------
         continueRoutine = True
-        routineTimer.add(0.500000)
         # update component parameters for each repeat
+        import random 
+        ITI = random.uniform(0.5, 1.5)
+        thisExp.addData('ITI', ITI) # record it in the data file
+        
         # keep track of which components have finished
-        Blank500Components = [BlankTest]
-        for thisComponent in Blank500Components:
+        ITIComponents = [BlankTest]
+        for thisComponent in ITIComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1781,14 +1689,14 @@ for thisBlockTrail in BlockTrail:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        Blank500Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        ITIClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Blank500"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        # -------Run Routine "ITI"-------
+        while continueRoutine:
             # get current time
-            t = Blank500Clock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=Blank500Clock)
+            t = ITIClock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=ITIClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
@@ -1803,7 +1711,7 @@ for thisBlockTrail in BlockTrail:
                 BlankTest.setAutoDraw(True)
             if BlankTest.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > BlankTest.tStartRefresh + 0.5-frameTolerance:
+                if tThisFlipGlobal > BlankTest.tStartRefresh + ITI-frameTolerance:
                     # keep track of stop time/frame for later
                     BlankTest.tStop = t  # not accounting for scr refresh
                     BlankTest.frameNStop = frameN  # exact frame index
@@ -1818,7 +1726,7 @@ for thisBlockTrail in BlockTrail:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Blank500Components:
+            for thisComponent in ITIComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1827,12 +1735,14 @@ for thisBlockTrail in BlockTrail:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Blank500"-------
-        for thisComponent in Blank500Components:
+        # -------Ending Routine "ITI"-------
+        for thisComponent in ITIComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         CM_Loop.addData('BlankTest.started', BlankTest.tStartRefresh)
         CM_Loop.addData('BlankTest.stopped', BlankTest.tStopRefresh)
+        # the Routine "ITI" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed CM_rep repeats of 'CM_Loop'
